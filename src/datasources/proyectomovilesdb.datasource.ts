@@ -5,6 +5,7 @@ const config = {
   name: 'proyectomovilesdb',
   connector: 'mysql',
   url: '',
+
   host: '34.133.182.181',
   port: 3306,
   user: 'proyectomovilesdb',
