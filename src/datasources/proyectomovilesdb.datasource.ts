@@ -9,7 +9,7 @@ const config = {
   port: 3306,
   user: 'b77214896aa644',
   password: '9d4842d9',
-  database: 'heroku_ac8dd84c7b5b059 '
+  database: 'heroku_ac8dd84c7b5b059'
 };
 
 // Observe application's life cycle to disconnect the datasource when
