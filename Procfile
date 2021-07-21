@@ -1,3 +1,3 @@
-web: slc run
+ bash: slc: command not found
 
 
