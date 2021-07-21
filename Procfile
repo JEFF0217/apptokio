@@ -1,3 +1,3 @@
- bash: slc: command not found
+ web: npm run start:prod
 
 
