@@ -7,9 +7,9 @@ const config = {
   url: '',
   host: 'us-cdbr-east-04.cleardb.com',
   port: 3306,
-  user: 'b1f0cf5b20a63a',
-  password: '499e6c8c',
-  database: 'heroku_20706bb6858ab8b'
+  user: 'b77214896aa644',
+  password: '9d4842d9',
+  database: 'heroku_ac8dd84c7b5b059'
 };
 
 // Observe application's life cycle to disconnect the datasource when
