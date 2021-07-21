@@ -2,14 +2,14 @@ import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
 const config = {
-  name: 'proyectomovilesdb',
+  name: 'clearDB_heroku',
   connector: 'mysql',
   url: '',
-  host: '34.133.182.181',
+  host: 'us-cdbr-east-04.cleardb.com',
   port: 3306,
-  user: 'proyectomovilesdb',
-  password: 'proyectomovilesdb',
-  database: 'ProyectoMoviles'
+  user: 'b1f0cf5b20a63a',
+  password: '499e6c8c',
+  database: 'heroku_20706bb6858ab8b'
 };
 
 // Observe application's life cycle to disconnect the datasource when
