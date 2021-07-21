@@ -9,7 +9,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=10.16"
+    "node": "14.17.3"
   },
   "scripts": {
     "build": "lb-tsc",
