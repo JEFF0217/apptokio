@@ -22,7 +22,7 @@ export class Medallas extends Entity {
   tipo: string;
 
   @property({
-    type: 'string',
+    type: 'number',
     required: true,
   })
   paisId: number;
