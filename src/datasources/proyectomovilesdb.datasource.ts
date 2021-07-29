@@ -1,6 +1,10 @@
 import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
+
+
+const fs = require('fs');
+
 const config = {
   name: 'ProyectoMoviles',
   connector: 'mysql',
@@ -9,7 +13,12 @@ const config = {
   port: 3306,
   user: 'proyectomovilesdb',
   password: 'proyectomovilesdb',
-  database: 'ProyectoMoviles'
+  database: 'ProyectoMoviles',
+  ssl: true,
+    ca : "/server-ca.pem",
+    cert : "/client-cert.pem",
+    key : "/client-key.pem"
+
 };
 
 // Observe application's life cycle to disconnect the datasource when
