@@ -1,6 +1,20 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, belongsTo, hasMany} from '@loopback/repository';
+import {Deportes} from './deportes.model';
+import {Medallas} from './medallas.model';
 
-@model({settings: {strict: false}})
+@model({
+  settings: {
+    strict: false,
+      foreignKeys: {
+        fk_deporte_id: {
+        name: 'fk_deporte_id',
+        entity: 'Deportes',
+        entityKey: 'id',
+        foreignKey: 'deporteId',
+      },
+    }
+  }
+})
 export class Eventos extends Entity {
   @property({
     type: 'number',
@@ -15,12 +29,11 @@ export class Eventos extends Entity {
   })
   nombre: string;
 
-  @property({
-    type: 'number',
-    required: true,
-  })
+  @belongsTo(() => Deportes)
   deporteId: number;
 
+  @hasMany(() => Medallas, {keyTo: 'eventoId'})
+  medallas: Medallas[];
   // Define well-known properties here
 
   // Indexer property to allow additional data

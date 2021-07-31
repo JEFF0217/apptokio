@@ -1,6 +1,27 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, belongsTo} from '@loopback/repository';
+import {Paises} from './paises.model';
+import {Eventos} from './eventos.model';
 
-@model({settings: {strict: false}})
+@model({
+  settings:{
+    strict: false,
+    foreignKeys: {
+      fk_pais_id: {
+        name: 'fk_pais_id',
+        entity: 'Paises',
+        entityKey: 'id',
+        foreignKey: 'paisId',
+      },
+      fk_eventos_id: {
+        name: 'fk_eventos_id',
+        entity: 'Eventos',
+        entityKey: 'id',
+        foreignKey: 'eventoId',
+      },
+    },
+  },
+})
+
 export class Medallas extends Entity {
   @property({
     type: 'number',
@@ -20,19 +41,11 @@ export class Medallas extends Entity {
     required: true,
   })
   tipo: string;
-
-  @property({
-    type: 'number',
-    required: true,
-  })
+  @belongsTo(() => Paises)
   paisId: number;
 
-  @property({
-    type: 'number',
-    required: true,
-  })
+  @belongsTo(() => Eventos)
   eventoId: number;
-
   // Define well-known properties here
 
   // Indexer property to allow additional data

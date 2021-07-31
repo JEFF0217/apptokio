@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Medallas} from './medallas.model';
 
 @model({settings: {strict: false}})
 export class Paises extends Entity {
@@ -16,6 +17,8 @@ export class Paises extends Entity {
   })
   nombre: string;
 
+  @hasMany(() => Medallas, {keyTo: 'paisId'})
+  medallas: Medallas[];
   // Define well-known properties here
 
   // Indexer property to allow additional data
