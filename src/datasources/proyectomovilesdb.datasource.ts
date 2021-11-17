@@ -13,7 +13,7 @@ const config = {
   port: 3306,
   user: 'proyectomovilesdb',
   password: 'proyectomovilesdb',
-  database: 'proyectomovilesdb',
+  database: 'ProyectoMoviles',
   ssl: true,
     ca : "/server-ca.pem",
     cert : "/client-cert.pem",
